@@ -22,7 +22,9 @@ jobs:
           java-version: '11'
 
       - name: Build with Gradle
-        run: ./gradlew build
+        run: gradle build
+        working-directory: my-java-app
 
       - name: Simulate upload to server
         run: echo "Simulating upload to server..."
+        working-directory: my-java-app
