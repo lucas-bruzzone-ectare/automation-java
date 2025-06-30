@@ -25,6 +25,10 @@ jobs:
         run: gradle build
         working-directory: my-java-app
 
+      - name: Run built JAR
+        run: java -jar build/libs/*.jar
+        working-directory: my-java-app
+
       - name: Simulate upload to server
         run: echo "Simulating upload to server..."
         working-directory: my-java-app
