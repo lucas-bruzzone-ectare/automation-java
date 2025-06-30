@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Add any dependencies your project needs here
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+task uploadToServer {
+    doLast {
+        println 'Simulating upload to server...'
+        // Here you can add logic to upload your application to a server
+    }
+}
+
+build.dependsOn uploadToServer
