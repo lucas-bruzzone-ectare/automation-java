@@ -25,3 +25,11 @@ task uploadToServer {
 }
 
 build.dependsOn uploadToServer
+
+jar {
+    manifest {
+        attributes(
+            'Main-Class': 'Main'
+        )
+    }
+}
